@@ -1,19 +1,3 @@
-## Docker commands used to build the application 
-docker build -t techtrends .
-
-## Docker commands used to tag image
-docker tag techtrends teabun/techtrends:v1.0.0
-docker login
-docker push teabun/techtrends:v1.0.0
-
-## Docker commands used to run the application
-docker run --name tt_7111 -d -p 7111:3111 techtrends
-
-## Docker commands used to get the application logs
-docker cp tt_7111:/techtrends/app.log .
-docker container rm --force --volumes tt_7111
-
-## Logs from the container running the TechTrends application
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
