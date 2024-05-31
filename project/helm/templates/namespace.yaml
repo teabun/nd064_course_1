@@ -1,7 +1,6 @@
-## Set the API endpoint used to create the Namespace resource.
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: sandbox
   labels:
-    name: sandbox
+    tier: test
+  name: {{ .Values.namespace.name }} 
