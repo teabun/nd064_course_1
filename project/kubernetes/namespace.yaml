@@ -4,4 +4,5 @@ kind: Namespace
 metadata:
   name: sandbox
   labels:
+    tier: test
     name: sandbox

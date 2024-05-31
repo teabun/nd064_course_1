@@ -23,15 +23,8 @@ resources:
     cpu: 500m
 
 ports:
-- containerPort: 3111
-  protocol: TCP
+  containerPort: 3111
 
-livenessProbe:
-   httpGet:
-     path: /healthz
-     port: 3111
+livenessProbe: /healthz
 
-readinessProbe:
-   httpGet:
-     path: /healthz
-     port: 3111
+readinessProbe: /healthz

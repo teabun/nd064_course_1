@@ -16,7 +16,7 @@ spec:
   ports:
   - port: 4111
     protocol: TCP
-    targetPort: 7111
+    targetPort: 3111
   ## Identify the pods managed by this Service using the following selectors.
   ## In this case, all pods with the label `techtrends`.
   selector:

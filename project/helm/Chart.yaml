@@ -1,10 +1,10 @@
 apiVersion: v1
-name: techtrends 
+name: techtrends
 description: Install TechTrends deployment
 keywords:
 - python
-- techtrends 
+- techtrends
 version: 1.0.0
 maintainers:
-- name: kahho 
+- name: kahho
   email: kah-ho.phong.ue@renesas.com

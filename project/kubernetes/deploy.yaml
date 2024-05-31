@@ -4,7 +4,6 @@ apiVersion: apps/v1
 kind: Deployment
 ## Set the parameters that make the object identifiable, such as its name, namespace, and labels.
 metadata:
-  annotations:
   labels:
     app: techtrends
   name: techtrends
@@ -37,7 +36,7 @@ spec:
     spec:
       containers:
         ## Set the image to be executed inside the container and image pull policy
-        ## In this case, run the `techtrends` application in version v2.0.0 and
+        ## In this case, run the `techtrends` application in version latest and
         ## only pull the image if it's not available on the current host.
       - image: teabun/techtrends:latest
         imagePullPolicy: IfNotPresent
