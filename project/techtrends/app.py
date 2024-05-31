@@ -31,7 +31,7 @@ def get_post(post_id):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 
-# Define the main route of the web application 
+# Define the main route of the web application
 @app.route('/')
 def index():
     connection = get_db_connection()
@@ -39,7 +39,7 @@ def index():
     connection.close()
     return render_template('index.html', posts=posts)
 
-# Define how each individual article is rendered 
+# Define how each individual article is rendered
 # If the post ID is not found a 404 page is shown
 @app.route('/<int:post_id>')
 def post(post_id):
@@ -48,7 +48,7 @@ def post(post_id):
         app.logger.info('A non-existing article is accessed')
         return render_template('404.html'), 404
     else:
-        app.logger.info(f'An existing article is accessed; {post}')
+        app.logger.info(f'An existing article is accessed => {post[2]}')
         return render_template('post.html', post=post)
 
 # Define the About Us page
@@ -57,7 +57,7 @@ def about():
     app.logger.info('"About Us" page is retrieved')
     return render_template('about.html')
 
-# Define the post creation functionality 
+# Define the post creation functionality
 @app.route('/create', methods=('GET', 'POST'))
 def create():
     if request.method == 'POST':
@@ -110,5 +110,11 @@ if __name__ == "__main__":
     if os.path.exists(logfile):
         os.remove(logfile)
     # Stream logs to a file, and set the default log level to DEBUG
-    logging.basicConfig(filename=logfile,level=logging.DEBUG)
+    # logging.basicConfig(filename=logfile, level=logging.DEBUG)
+
+    # See https://docs.python.org/3/library/logging.handlers.html
+    # See https://docs.python.org/3/library/logging.html#logging.basicConfig
+    # logging.basicConfig(level=logging.DEBUG, handlers=[logging.FileHandler(logfile), logging.StreamHandler()])
+    logging.basicConfig(level=logging.DEBUG, handlers=[logging.FileHandler(logfile), logging.StreamHandler()], format= '%(levelname)s:%(name)s:%(asctime)s, %(message)s')
+
     app.run(host='0.0.0.0', port='3111')

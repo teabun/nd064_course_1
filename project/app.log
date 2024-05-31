@@ -1,35 +1,33 @@
-WARNING:werkzeug: * Running on all addresses.
+WARNING:werkzeug:2024-05-31 20:44:25,410,  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
-INFO:app:get_db_connection
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:13] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:18] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:app:A new article is created => Hello World
-INFO:app:get_db_connection
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:28] "[32mPOST /create HTTP/1.1[0m" 302 -
-INFO:app:get_db_connection
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:28] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:app:get_db_connection
-INFO:app:An existing article is accessed; <sqlite3.Row object at 0x75f8c832cfb0>
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:30] "GET /7 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:app:"About Us" page is retrieved
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:33] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:app:get_db_connection
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:35] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:app:get_db_connection
-INFO:app:An existing article is accessed; <sqlite3.Row object at 0x75f8c8328630>
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:36] "GET /2 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:36] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:app:get_db_connection
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:38] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-INFO:app:Healthcheck request successfully
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:42] "GET /healthz HTTP/1.1" 200 -
-INFO:app:Metrics request successfully
-INFO:werkzeug:172.17.0.1 - - [24/May/2024 09:11:47] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:2024-05-31 20:44:25,411,  * Running on http://10.0.2.15:3111/ (Press CTRL+C to quit)
+INFO:app:2024-05-31 20:44:39,139, get_db_connection
+INFO:werkzeug:2024-05-31 20:44:39,183, 127.0.0.1 - - [31/May/2024 20:44:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2024-05-31 20:44:39,262, 127.0.0.1 - - [31/May/2024 20:44:39] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2024-05-31 20:44:40,700, get_db_connection
+INFO:app:2024-05-31 20:44:40,717, An existing article is accessed => 2020 CNCF Annual Report
+INFO:werkzeug:2024-05-31 20:44:40,728, 127.0.0.1 - - [31/May/2024 20:44:40] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:2024-05-31 20:44:40,787, 127.0.0.1 - - [31/May/2024 20:44:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2024-05-31 20:44:42,807, "About Us" page is retrieved
+INFO:werkzeug:2024-05-31 20:44:42,815, 127.0.0.1 - - [31/May/2024 20:44:42] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:2024-05-31 20:44:42,901, 127.0.0.1 - - [31/May/2024 20:44:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:2024-05-31 20:44:47,890, 127.0.0.1 - - [31/May/2024 20:44:47] "[33mGET /wrong HTTP/1.1[0m" 404 -
+INFO:app:2024-05-31 20:44:52,740, get_db_connection
+INFO:werkzeug:2024-05-31 20:44:52,758, 127.0.0.1 - - [31/May/2024 20:44:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2024-05-31 20:44:52,802, 127.0.0.1 - - [31/May/2024 20:44:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:2024-05-31 20:45:15,691, 127.0.0.1 - - [31/May/2024 20:45:15] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2024-05-31 20:45:15,741, 127.0.0.1 - - [31/May/2024 20:45:15] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2024-05-31 20:45:32,628, A new article is created => Creating hello world
+INFO:app:2024-05-31 20:45:32,635, get_db_connection
+INFO:werkzeug:2024-05-31 20:45:32,659, 127.0.0.1 - - [31/May/2024 20:45:32] "[32mPOST /create HTTP/1.1[0m" 302 -
+INFO:app:2024-05-31 20:45:32,690, get_db_connection
+INFO:werkzeug:2024-05-31 20:45:32,703, 127.0.0.1 - - [31/May/2024 20:45:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2024-05-31 20:45:32,752, 127.0.0.1 - - [31/May/2024 20:45:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2024-05-31 20:45:38,032, get_db_connection
+INFO:app:2024-05-31 20:45:38,039, An existing article is accessed => Creating hello world
+INFO:werkzeug:2024-05-31 20:45:38,040, 127.0.0.1 - - [31/May/2024 20:45:38] "GET /9 HTTP/1.1" 200 -
+INFO:werkzeug:2024-05-31 20:45:38,129, 127.0.0.1 - - [31/May/2024 20:45:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:2024-05-31 20:45:54,420, Healthcheck request successfully
+INFO:werkzeug:2024-05-31 20:45:54,421, 127.0.0.1 - - [31/May/2024 20:45:54] "GET /healthz HTTP/1.1" 200 -
+INFO:app:2024-05-31 20:46:01,277, Metrics request successfully
+INFO:werkzeug:2024-05-31 20:46:01,279, 127.0.0.1 - - [31/May/2024 20:46:01] "GET /metrics HTTP/1.1" 200 -
